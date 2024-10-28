@@ -25,7 +25,7 @@ class Copilot:
         self.index = VectorStoreIndex.from_documents(
             docs, embed_model=embedding_model, show_progress=True
         )
-        self.retriever = self.index.as_retriever(similarity_top_k=3)
+        self.retriever = self.index.as_retriever(similarity_top_k=9)
 
         self.llm_client = OpenAI(api_key=key)
 
